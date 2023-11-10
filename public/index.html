@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    <h1>회원가입 폼</h1>
+    <form action="/register" method="post">
+      <label for="username">사용자 이름:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" name="password" required><br>
+      <input type="submit" value="가입하기">
+    </form>
+    <div id="fetchData">
+      <h2>저장된 데이터 조회</h2>
+      <button onclick="fetchData()">데이터 조회</button>
+      <div id="userData"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
