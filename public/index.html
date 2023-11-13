@@ -21,6 +21,13 @@
       <button onclick="fetchData()">데이터 조회</button>
       <div id="userData"></div>
     </div>
+    <form id="loginForm">
+      <label for="loginUsername">사용자명:</label>
+      <input type="text" id="loginUsername" name="username" required>
+      <label for="loginPassword">비밀번호:</label>
+      <input type="password" id="loginPassword" name="password" required>
+      <button type="button" onclick="loginUser()">로그인</button>
+    </form>
     <script src="app.js"></script>
 </body>
 </html>

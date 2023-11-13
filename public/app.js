@@ -33,3 +33,23 @@ async function fetchData() {
     userDataDiv.textContent = '저장된 데이터가 없습니다.';
   }
 }
+
+async function loginUser() {
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+
+  const response = await fetch('/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
+  });
+
+  const result = await response.text();
+  alert(result);
+
+  if (response.status === 200) {
+    window.location.href = '/blog';
+  }
+}
